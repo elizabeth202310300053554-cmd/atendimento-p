@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Zetek Telecom | Internet Banda Larga</title>
+    <title>Altenburg Têxtil | Artefatos para Casa, Pesca e Camping</title>
     <!-- Bootstrap 5 + Icons + Google Fonts -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Google Fonts para tipografia refinada -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Orbitron:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -17,606 +16,473 @@
         }
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            color: #0a2b3e;
+            background-color: #fefcf5;
+            color: #2c2b28;
             scroll-behavior: smooth;
         }
-        /* paleta personalizada: azul moderno + detalhes laranja/vibrante */
-        :root {
-            --primary-dark: #022b3a;
-            --primary-teal: #1f7a8c;
-            --accent-orange: #e67e22;
-            --light-bg: #f1f9fe;
-            --gray-mid: #475569;
-            --logo-glow: #f39c12;
+        h1, h2, h3, h4, .logo-text, .navbar-brand {
+            font-family: 'Playfair Display', serif;
         }
-        .navbar {
-            background: rgba(2, 43, 58, 0.96) !important;
-            backdrop-filter: blur(4px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-            padding: 0.6rem 0;
-            transition: all 0.2s;
+        .bg-nature {
+            background: linear-gradient(135deg, #1e4a2f 0%, #2b6e3c 100%);
         }
-        /* ========= LOGO ESTILIZADA ========= */
-        .navbar-brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 800;
-            text-decoration: none;
-            padding: 5px 0;
-        }
-        /* Versão com ícone e texto estilizado - pronta para substituir por imagem */
-        .logo-icon {
-            background: linear-gradient(135deg, #f39c12, #e67e22);
-            width: 42px;
-            height: 42px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 12px rgba(230,126,34,0.3);
-            transition: transform 0.2s;
-        }
-        .logo-icon i {
-            font-size: 1.8rem;
-            color: white;
-        }
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-            line-height: 1.2;
-        }
-        .logo-main {
-            font-size: 1.6rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            color: white;
-            font-family: 'Orbitron', 'Inter', sans-serif;
-        }
-        .logo-main span {
-            color: #f39c12;
-            font-weight: 900;
-        }
-        .logo-tag {
-            font-size: 0.65rem;
-            letter-spacing: 1px;
-            color: rgba(255,255,255,0.7);
-            font-weight: 500;
-            margin-top: -2px;
-        }
-        /* hover effect na logo */
-        .navbar-brand:hover .logo-icon {
-            transform: scale(1.02);
-        }
-        /* Logo alternativa para footer (similar) */
-        .footer-logo {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-        }
-        .footer-logo-icon {
-            background: linear-gradient(135deg, #f39c12, #e67e22);
-            width: 38px;
-            height: 38px;
-            border-radius: 10px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .footer-logo-icon i {
-            font-size: 1.5rem;
-            color: white;
-        }
-        .footer-logo-text {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: white;
-            font-family: 'Orbitron', 'Inter', sans-serif;
-        }
-        .footer-logo-text span {
-            color: #f39c12;
-        }
-        /* ===== fim logo ===== */
-        .nav-link {
-            color: rgba(255,255,255,0.85) !important;
-            font-weight: 500;
-            margin: 0 0.3rem;
-            transition: 0.2s;
-        }
-        .nav-link:hover, .nav-link.active {
-            color: #f39c12 !important;
-        }
-        .hero {
-            background: linear-gradient(135deg, #022b3a 0%, #0a4b5e 100%);
-            padding: 5rem 0 5rem 0;
-            color: white;
-            border-bottom: 5px solid #e67e22;
-        }
-        .hero h1 {
-            font-weight: 800;
-            font-size: 3.2rem;
-        }
-        .btn-accent {
-            background-color: #e67e22;
-            border: none;
-            padding: 12px 28px;
-            font-weight: 600;
-            color: white;
-            border-radius: 40px;
+        .btn-outline-custom {
+            border: 2px solid #d4af37;
+            color: #d4af37;
             transition: all 0.3s;
+            font-weight: 600;
         }
-        .btn-accent:hover {
-            background-color: #d35400;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        .btn-outline-custom:hover {
+            background-color: #d4af37;
+            color: #1e3a2f;
+            border-color: #d4af37;
         }
-        .btn-outline-light-custom {
-            border: 2px solid rgba(255,255,255,0.7);
-            border-radius: 40px;
-            padding: 10px 24px;
+        .btn-primary-custom {
+            background-color: #c49a2b;
+            border: none;
+            color: #1e2a1c;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .btn-primary-custom:hover {
+            background-color: #a87c1a;
             color: white;
-            font-weight: 500;
-            transition: 0.2s;
         }
-        .btn-outline-light-custom:hover {
+        .hero-section {
+            background: url('https://images.pexels.com/photos/461064/pexels-photo-461064.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
+            position: relative;
+            padding: 120px 0;
+        }
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .card-icon {
+            font-size: 2.8rem;
+            color: #c49a2b;
+            margin-bottom: 1rem;
+        }
+        .feature-card {
+            border: none;
+            border-radius: 24px;
             background: white;
-            color: #022b3a;
-            border-color: white;
+            transition: transform 0.25s ease, box-shadow 0.3s;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.08);
         }
         .section-title {
-            font-weight: 800;
-            font-size: 2rem;
+            font-weight: 700;
             position: relative;
-            margin-bottom: 3rem;
-            color: #022b3a;
+            display: inline-block;
+            margin-bottom: 1rem;
         }
         .section-title:after {
             content: '';
-            display: block;
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
             width: 70px;
-            height: 4px;
-            background: #e67e22;
-            margin-top: 10px;
+            height: 3px;
+            background: #c49a2b;
             border-radius: 3px;
         }
-        .card-plan {
-            border: none;
-            border-radius: 28px;
-            transition: 0.25s ease-in-out;
-            background: white;
-            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
-        }
-        .card-plan:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15);
-        }
-        .price {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #022b3a;
-        }
-        .price small {
-            font-size: 0.9rem;
-            font-weight: 400;
-            color: #5f6c80;
-        }
-        .icon-feature {
-            font-size: 2.2rem;
-            color: #1f7a8c;
-            margin-bottom: 1rem;
-        }
         .info-card {
-            background: white;
-            border-radius: 24px;
-            padding: 1.8rem;
-            height: 100%;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.03);
-            transition: all 0.2s;
-            border: 1px solid #e2edf2;
+            background: #fff8ed;
+            border-left: 5px solid #c49a2b;
+            border-radius: 20px;
         }
-        .info-card i {
-            font-size: 2.5rem;
-            color: #e67e22;
+        footer a {
+            text-decoration: none;
+            transition: color 0.2s;
         }
-        footer {
-            background-color: #022b3a;
-            color: #cbd5e1;
-            padding-top: 3rem;
-            padding-bottom: 1.5rem;
+        .bg-moss {
+            background-color: #f2f0e6;
+        }
+        .icon-bg {
+            background: #e9f0e6;
+            width: 65px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
         }
         .social-icon {
-            font-size: 1.5rem;
-            margin-right: 1rem;
-            color: #cbd5e1;
-            transition: 0.2s;
+            background: #2d4a2b;
+            width: 38px;
+            height: 38px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s;
+            color: white;
         }
         .social-icon:hover {
-            color: #e67e22;
+            background: #c49a2b;
+            color: #1e3a2f;
+            transform: scale(1.05);
         }
-        .btn-wpp {
-            background-color: #25D366;
-            border-radius: 50px;
-            padding: 10px 24px;
-            font-weight: 600;
-            color: white;
-            transition: 0.2s;
-            border: none;
+        .navbar {
+            background-color: rgba(30, 58, 40, 0.95);
+            backdrop-filter: blur(4px);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
         }
-        .btn-wpp:hover {
-            background-color: #1da851;
-            transform: scale(1.02);
+        .nav-link {
+            color: #f8f3e0 !important;
+            font-weight: 500;
+            margin: 0 6px;
         }
-        .badge-cnpj {
-            font-family: monospace;
-            background: #eef2ff;
-            color: #022b3a;
-            font-size: 0.85rem;
+        .nav-link:hover {
+            color: #d4af37 !important;
+        }
+        .logo-text {
+            font-size: 1.7rem;
+            letter-spacing: -0.5px;
         }
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.2rem;
+            .hero-section {
+                padding: 80px 0;
             }
-            .section-title {
-                font-size: 1.8rem;
-            }
-            .logo-main {
-                font-size: 1.3rem;
-            }
-            .logo-icon {
-                width: 36px;
-                height: 36px;
-            }
-            .logo-icon i {
-                font-size: 1.5rem;
-            }
-            .logo-tag {
-                font-size: 0.55rem;
-            }
-        }
-        /* efeito de destaque na logo */
-        @keyframes pulse-glow {
-            0% { box-shadow: 0 0 0 0 rgba(243,156,18,0.4); }
-            70% { box-shadow: 0 0 0 8px rgba(243,156,18,0); }
-            100% { box-shadow: 0 0 0 0 rgba(243,156,18,0); }
-        }
-        .logo-icon {
-            animation: pulse-glow 2s infinite;
         }
     </style>
 </head>
 <body>
 
-<!-- Navbar fixa com LOGO estilizada (ícone + texto) -->
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-    <div class="container">
-        <!-- LOGO DO SITE: versão com ícone customizado + texto Zetek Telecom -->
-        <a class="navbar-brand" href="#">
-            <div class="logo-icon">
-                <i class="bi bi-broadcast"></i>
-            </div>
-            <div class="logo-text">
-                <div class="logo-main">Zetek<span>Telecom</span></div>
-                <div class="logo-tag">FIBRA ÓPTICA | ALTA VELOCIDADE</div>
-            </div>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarMain">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active" href="#home">Início</a></li>
-                <li class="nav-item"><a class="nav-link" href="#planos">Planos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#diferenciais">Diferenciais</a></li>
-                <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-            </ul>
-            <a href="#contato" class="btn btn-accent ms-lg-3">Assine Já</a>
-        </div>
-    </div>
-</nav>
-
-<!-- Hero Section -->
-<section id="home" class="hero">
-    <div class="container py-4">
-        <div class="row align-items-center g-5">
-            <div class="col-lg-7">
-                <h1 class="mb-3">Internet de Verdade <br> para <span style="color:#f39c12;">Breu Branco</span> e região</h1>
-                <p class="lead mb-4">Fibra óptica de alta performance, estabilidade e suporte local. Conecte-se com a Zetek Telecom e tenha a melhor experiência digital.</p>
-                <div class="d-flex flex-wrap gap-3">
-                    <a href="#planos" class="btn btn-accent btn-lg"><i class="bi bi-lightning-charge-fill me-2"></i>Ver Planos</a>
-                    <a href="https://wa.me/5594992384336?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20os%20planos%20Zetek%20Telecom." target="_blank" class="btn btn-wpp btn-lg"><i class="bi bi-whatsapp me-2"></i>Fale via WhatsApp</a>
-                </div>
-                <div class="mt-4 d-flex flex-wrap gap-4">
-                    <div><i class="bi bi-check-circle-fill text-warning me-1"></i> Fibra óptica</div>
-                    <div><i class="bi bi-check-circle-fill text-warning me-1"></i> Suporte técnico local</div>
-                    <div><i class="bi bi-check-circle-fill text-warning me-1"></i> 99% de disponibilidade</div>
-                </div>
-            </div>
-            <div class="col-lg-5 text-center">
-                <i class="bi bi-wifi display-1" style="font-size: 8rem; opacity: 0.9; color: #f39c12;"></i>
-                <p class="mt-2 fw-semibold">Conexão que transforma</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Seção Planos com Cards -->
-<section id="planos" class="py-5">
-    <div class="container">
-        <div class="text-center">
-            <h2 class="section-title d-inline-block text-center" style="border-bottom: none;">Escolha seu plano ideal</h2>
-            <p class="text-muted mb-5">Velocidades pensadas para cada necessidade, com preço justo e instalação rápida</p>
-        </div>
-        <div class="row g-4">
-            <!-- Plano 300 Mega -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card-plan card h-100 p-4">
-                    <div class="text-center">
-                        <i class="bi bi-speedometer2 fs-1" style="color:#1f7a8c;"></i>
-                        <h3 class="mt-3 fw-bold">Ultra 300 Mega</h3>
-                        <div class="price">R$ 89,90 <small>/mês</small></div>
-                        <hr>
-                        <ul class="list-unstyled text-start mt-3">
-                            <li><i class="bi bi-check-lg text-success me-2"></i> 300 Mbps Download</li>
-                            <li><i class="bi bi-check-lg text-success me-2"></i> 150 Mbps Upload</li>
-                            <li><i class="bi bi-check-lg text-success me-2"></i> Wi-Fi 6 + Roteador incluso</li>
-                            <li><i class="bi bi-check-lg text-success me-2"></i> Suporte 24h</li>
-                        </ul>
-                        <a href="#contato" class="btn btn-outline-dark rounded-pill mt-3 w-100">Quero esse</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Plano 500 Mega -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card-plan card h-100 p-4 border-top border-4 border-warning">
-                    <div class="text-center">
-                        <i class="bi bi-star-fill fs-1" style="color:#e67e22;"></i>
-                        <h3 class="mt-3 fw-bold">Turbo 500 Mega</h3>
-                        <div class="price">R$ 119,90 <small>/mês</small></div>
-                        <hr>
-                        <ul class="list-unstyled text-start mt-3">
-                            <li><i class="bi bi-check-lg text-success me-2"></i> 500 Mbps Download</li>
-                            <li><i class="bi bi-check-lg text-success me-2"></i> 250 Mbps Upload</li>
-                            <li><i class="bi bi-check-lg text-success me-2"></i> Roteador Mesh compatível</li>
-                            <li><i class="bi bi-check-lg text-success me-2"></i> Suporte prioritário</li>
-                        </ul>
-                        <a href="#contato" class="btn btn-accent rounded-pill mt-3 w-100">Plano Top</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Plano 1 Giga -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card-plan card h-100 p-4">
-                    <div class="text-center">
-                        <i class="bi bi-rocket-takeoff fs-1" style="color:#022b3a;"></i>
-                        <h3 class="mt-3 fw-bold">Giga 1 Gbps</h3>
-                        <div class="price">R$ 179,90 <small>/mês</small></div>
-                        <hr>
-                        <ul class="list-unstyled text-start mt-3">
-                            <li><i class="bi bi-check-lg text-success me-2"></i> 1000 Mbps Download/Upload</li>
-                            <li><i class="bi bi-check-lg text-success me-2"></i> Tecnologia GPON Fibra</li>
-                            <li><i class="bi bi-check-lg text-success me-2"></i> Instalação Grátis</li>
-                            <li><i class="bi bi-check-lg text-success me-2"></i> Suporte VIP</li>
-                        </ul>
-                        <a href="#contato" class="btn btn-outline-dark rounded-pill mt-3 w-100">Garantir Giga</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Diferenciais / Ícones e Frases -->
-<section id="diferenciais" class="py-5" style="background: #eef7fc;">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 class="section-title d-inline-block">Por que escolher a Zetek?</h2>
-            <p class="text-muted">Tecnologia, compromisso e atendimento humano</p>
-        </div>
-        <div class="row g-4 text-center">
-            <div class="col-md-6 col-lg-3">
-                <div class="info-card">
-                    <i class="bi bi-trophy"></i>
-                    <h4 class="mt-2 fw-bold">Alta performance</h4>
-                    <p class="text-secondary">Rede estável com baixa latência, ideal para games, streaming e home office.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="info-card">
-                    <i class="bi bi-headset"></i>
-                    <h4 class="mt-2 fw-bold">Suporte local</h4>
-                    <p class="text-secondary">Equipe técnica em Breu Branco e região, com atendimento ágil e personalizado.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="info-card">
-                    <i class="bi bi-shield-check"></i>
-                    <h4 class="mt-2 fw-bold">Segurança digital</h4>
-                    <p class="text-secondary">Proteção contra ameaças e navegação mais segura para toda a família.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="info-card">
-                    <i class="bi bi-arrow-repeat"></i>
-                    <h4 class="mt-2 fw-bold">Fibra óptica pura</h4>
-                    <p class="text-secondary">Conexão simétrica de alta velocidade, sem oscilações e com maior alcance.</p>
-                </div>
-            </div>
-        </div>
-        <!-- frase motivacional -->
-        <div class="mt-5 text-center bg-white rounded-4 p-4 shadow-sm">
-            <i class="bi bi-quote fs-1 text-primary opacity-50"></i>
-            <p class="fs-5 fst-italic text-dark">"Mais que internet, a Zetek Telecom conecta você ao futuro com qualidade e compromisso."</p>
-            <p class="fw-semibold">Equipe Zetek</p>
-        </div>
-    </div>
-</section>
-
-<!-- Sobre / Empresa com dados legais -->
-<section id="sobre" class="py-5">
-    <div class="container">
-        <div class="row g-5 align-items-center">
-            <div class="col-lg-6">
-                <h2 class="section-title">Sobre a Zetek Telecom</h2>
-                <p class="lead">Conectando o Novo Horizonte e toda Breu Branco com excelência desde 2019.</p>
-                <p>Somos a <strong>Ribeiro e Abreu Provedor de Internet LTDA</strong>, uma empresa genuinamente paraense que nasceu com o propósito de oferecer internet de qualidade, com suporte humano e tecnologia de ponta. Nossa sede fica na Avenida Belém, coração do bairro Novo Horizonte, e atendemos residências e empresas com planos que cabem no seu bolso.</p>
-                <div class="mt-4 p-3 bg-light rounded-3">
-                    <div class="row row-cols-1 row-cols-sm-2 g-3">
-                        <div class="col"><i class="bi bi-building me-2"></i> <strong>Razão Social:</strong> Ribeiro e Abreu Provedor de Internet LTDA</div>
-                        <div class="col"><i class="bi bi-tag me-2"></i> <strong>Nome Fantasia:</strong> Zetek Telecom</div>
-                        <div class="col"><i class="bi bi-card-text me-2"></i> <strong>CNPJ:</strong> 24.844.772/0003-30</div>
-                        <div class="col"><i class="bi bi-calendar-check me-2"></i> <strong>Data de Abertura:</strong> 02/10/2019</div>
-                    </div>
-                </div>
-                <div class="mt-3 d-flex flex-wrap gap-3">
-                    <span class="badge-cnpj badge bg-light p-2 rounded-3"><i class="bi bi-geo-alt-fill me-1"></i> Avenida Belem, 177 - Novo Horizonte</span>
-                    <span class="badge-cnpj badge bg-light p-2 rounded-3"><i class="bi bi-mailbox"></i> Breu Branco - PA, CEP 68488-000</span>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="bg-white rounded-4 p-4 shadow">
-                    <i class="bi bi-info-circle-fill text-accent" style="color:#e67e22; font-size: 2rem;"></i>
-                    <h4 class="mt-2 fw-bold">Nossa missão</h4>
-                    <p>Oferecer conectividade rápida, estável e acessível para impulsionar o desenvolvimento digital da nossa comunidade. Valorizamos o relacionamento com cada cliente e investimos constantemente em infraestrutura.</p>
-                    <hr>
-                    <h5><i class="bi bi-trophy"></i> Certificações e compromisso</h5>
-                    <p>Empresa regularizada, com mais de 5 anos de experiência no setor de telecomunicações, garantindo transparência e respeito ao consumidor.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Seção Contato + Mapa e informações -->
-<section id="contato" class="py-5" style="background: #ffffff;">
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-lg-5">
-                <h2 class="section-title mb-3">Fale com a gente</h2>
-                <p class="mb-4">Estamos prontos para atender você! Escolha seu plano, tire dúvidas ou solicite visita técnica.</p>
-                <div class="d-flex flex-column gap-3">
-                    <div class="d-flex align-items-center">
-                        <i class="bi bi-whatsapp fs-2 me-3" style="color:#25D366;"></i>
-                        <div><strong>WhatsApp / Telefone</strong><br>(94) 99238-4336</div>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <i class="bi bi-geo-alt fs-2 me-3" style="color:#e67e22;"></i>
-                        <div><strong>Endereço Matriz</strong><br>Avenida Belem, 177 - Novo Horizonte, Breu Branco - PA, 68488-000</div>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <i class="bi bi-envelope fs-2 me-3" style="color:#1f7a8c;"></i>
-                        <div><strong>E-mail</strong><br>contato@zetektelecom.com.br</div>
-                    </div>
-                    <div class="d-flex align-items-center">
-                        <i class="bi bi-clock fs-2 me-3" style="color:#022b3a;"></i>
-                        <div><strong>Atendimento</strong><br>Segunda a Sexta: 8h às 18h | Sábado: 8h às 12h</div>
-                    </div>
-                </div>
-                <div class="mt-4">
-                    <a href="https://wa.me/5594992384336?text=Olá!%20Gostaria%20de%20assinante%20Zetek%20Telecom" target="_blank" class="btn btn-wpp btn-lg w-100"><i class="bi bi-whatsapp"></i> Iniciar conversa</a>
-                </div>
-            </div>
-            <div class="col-lg-7">
-                <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
-                    <div class="card-body p-4">
-                        <h4 class="mb-3"><i class="bi bi-pin-map-fill me-2"></i> Localização de referência</h4>
-                        <div class="bg-light rounded-3 p-3 text-center">
-                            <i class="bi bi-building fs-1 d-block mb-2 text-secondary"></i>
-                            <p class="mb-0"><strong>Avenida Belem, 177 - Bairro Novo Horizonte</strong><br>Próximo à Praça Central, Breu Branco - PA.</p>
-                            <hr>
-                            <a href="https://maps.google.com/?q=Avenida+Belem+177+Breu+Branco+PA" target="_blank" class="btn btn-sm btn-outline-secondary mt-2"><i class="bi bi-map"></i> Ver no Google Maps</a>
-                        </div>
-                        <div class="alert alert-warning mt-3 d-flex align-items-center" role="alert">
-                            <i class="bi bi-info-circle-fill me-2"></i>
-                            <div>Instalação gratuita para planos anuais ou com fidelidade de 12 meses. Consulte condições!</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Footer completo com LOGO duplicada e dados -->
-<footer>
-    <div class="container">
-        <div class="row gy-4">
-            <div class="col-md-5">
-                <!-- Logo no footer (versão simplificada) -->
-                <a href="#" class="footer-logo text-decoration-none">
-                    <div class="footer-logo-icon">
-                        <i class="bi bi-broadcast"></i>
-                    </div>
-                    <div class="footer-logo-text">Zetek<span>Telecom</span></div>
-                </a>
-                <p class="mt-3" style="color:#b0c4de;">Internet de qualidade que transforma vidas e negócios em Breu Branco e região.</p>
-                <div class="mt-3">
-                    <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="social-icon"><i class="bi bi-whatsapp"></i></a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <h5 class="text-white fw-semibold">Links rápidos</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><a href="#home" class="text-decoration-none text-light-emphasis" style="color:#cbd5e1;">Início</a></li>
-                    <li class="mb-2"><a href="#planos" class="text-decoration-none text-light-emphasis" style="color:#cbd5e1;">Planos e preços</a></li>
-                    <li class="mb-2"><a href="#diferenciais" class="text-decoration-none text-light-emphasis" style="color:#cbd5e1;">Diferenciais</a></li>
-                    <li class="mb-2"><a href="#sobre" class="text-decoration-none text-light-emphasis" style="color:#cbd5e1;">Sobre a empresa</a></li>
-                    <li class="mb-2"><a href="#contato" class="text-decoration-none text-light-emphasis" style="color:#cbd5e1;">Contato e suporte</a></li>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top py-3">
+        <div class="container">
+            <a class="navbar-brand text-white logo-text" href="#">
+                <i class="fas fa-feather-alt me-2" style="color: #d4af37;"></i> Altenburg Têxtil
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
                 </ul>
             </div>
-            <div class="col-md-3">
-                <h5 class="text-white fw-semibold">Dados cadastrais</h5>
-                <p class="small mb-1"><i class="bi bi-cnpj"></i> CNPJ: 24.844.772/0003-30</p>
-                <p class="small mb-1"><i class="bi bi-calendar"></i> Situação Cadastral: Ativa desde 02/10/2019</p>
-                <p class="small mb-0"><i class="bi bi-geo"></i> Breu Branco - Pará</p>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section text-white">
+        <div class="container hero-content text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <span class="badge bg-warning text-dark mb-3 px-3 py-2 rounded-pill"><i class="fas fa-certificate me-1"></i> Desde 2005 com excelência têxtil</span>
+                    <h1 class="display-4 fw-bold mb-4">Conforto que conecta<br>sua casa, aventuras na pesca e camping</h1>
+                    <p class="lead mb-4">Tecidos e artefatos premium: jogos de cama, redes, lonas, tendas e acessórios robustos para a natureza.</p>
+                    <a href="#produtos" class="btn btn-outline-custom btn-lg px-4 me-2"><i class="fas fa-umbrella-beach me-2"></i>Explorar coleções</a>
+                    <a href="#contato" class="btn btn-primary-custom btn-lg px-4"><i class="fas fa-headset me-2"></i>Fale conosco</a>
+                </div>
             </div>
         </div>
-        <hr class="mt-4 opacity-25">
-        <div class="row">
-            <div class="col text-center small">
-                &copy; 2025 Zetek Telecom - Ribeiro e Abreu Provedor de Internet LTDA. Todos os direitos reservados.<br>
-                <span class="opacity-50">Avenida Belem, 177 - Novo Horizonte | CEP: 68488-000 | (94) 99238-4336</span>
+    </section>
+
+    <!-- DESTAQUES / ICONES + FRASES -->
+    <section class="container py-5">
+        <div class="row text-center g-4">
+            <div class="col-md-4">
+                <div class="icon-bg mx-auto"><i class="fas fa-home fa-2x" style="color: #c49a2b;"></i></div>
+                <h4 class="mt-3 fw-semibold">Uso doméstico premium</h4>
+                <p class="text-muted">Lençóis, mantas, toalhas e almofadas com fios de algodão e design atemporal.</p>
             </div>
+            <div class="col-md-4">
+                <div class="icon-bg mx-auto"><i class="fas fa-fish fa-2x" style="color: #c49a2b;"></i></div>
+                <h4 class="mt-3 fw-semibold">Pesca profissional</h4>
+                <p class="text-muted">Redes de proteção, mochilas estanques, coletes e tecidos resistentes à água salgada.</p>
+            </div>
+            <div class="col-md-4">
+                <div class="icon-bg mx-auto"><i class="fas fa-campground fa-2x" style="color: #c49a2b;"></i></div>
+                <h4 class="mt-3 fw-semibold">Camping resistente</h4>
+                <p class="text-muted">Tendas, redes especiais, barracas leves e cobertores térmicos para noites ao ar livre.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUTOS E CATEGORIAS (3 PILARES) -->
+    <section id="produtos" class="py-5 bg-moss">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Nossos artefatos têxteis</h2>
+                <p class="lead text-muted mt-4">Tecnologia têxtil com tradição alemã – soluções para cada ambiente</p>
+            </div>
+            <div class="row g-4">
+                <!-- Card 1: Doméstico -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card feature-card h-100 p-3 text-center">
+                        <div class="card-body">
+                            <div class="card-icon"><i class="fas fa-couch"></i></div>
+                            <h3 class="h4 fw-bold">Casa & Bem-Estar</h3>
+                            <p class="card-text text-secondary">Jogos de cena em algodão egípcio, edredons, toalhas felpudas e itens para enxoval com certificação Oeko-Tex.</p>
+                            <div class="mt-3"><i class="fas fa-check-circle text-success me-1"></i> Hipoalergênico <i class="fas fa-check-circle text-success ms-2 me-1"></i> Durável</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2: Pesca -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card feature-card h-100 p-3 text-center">
+                        <div class="card-body">
+                            <div class="card-icon"><i class="fas fa-water"></i></div>
+                            <h3 class="h4 fw-bold">Equipamentos de Pesca</h3>
+                            <p class="card-text text-secondary">Mochilas impermeáveis, rede de desembarque, bolsas térmicas, protetores solares têxteis e coletes salva-vidas.</p>
+                            <div class="mt-3"><i class="fas fa-tint me-1"></i> Resistente UV <i class="fas fa-shield-alt ms-2 me-1"></i> Anti-rasgo</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3: Camping -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card feature-card h-100 p-3 text-center">
+                        <div class="card-body">
+                            <div class="card-icon"><i class="fas fa-tree"></i></div>
+                            <h3 class="h4 fw-bold">Aventura & Camping</h3>
+                            <p class="card-text text-secondary">Tendas leves 4 estações, redes tipo "moita", cobertores de lã sintética, esteiras infláveis e mosquiteiros portáteis.</p>
+                            <div class="mt-3"><i class="fas fa-wind me-1"></i> Ventilação técnica <i class="fas fa-fire ms-2 me-1"></i> Retardante chamas</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Frase motivacional -->
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <div class="p-4 rounded-4 bg-white shadow-sm d-inline-block px-5">
+                        <i class="fas fa-quote-left me-2 text-gold" style="color:#c49a2b;"></i>
+                        <span class="fw-semibold">"Qualidade têxtil que aquece lares e protege suas jornadas na natureza."</span>
+                        <i class="fas fa-quote-right ms-2 text-gold" style="color:#c49a2b;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE A EMPRESA + DADOS LEGAIS -->
+    <section id="sobre" class="py-5">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <span class="badge bg-dark text-warning mb-2 px-3 py-2"><i class="far fa-building me-1"></i> Tradição & Inovação</span>
+                    <h2 class="display-6 fw-bold mb-3">Há mais de 18 anos tecendo excelência</h2>
+                    <p class="lead text-muted">A Altenburg Textil S.A. é referência nacional em artefatos têxteis, unindo tecnologia alemã com o aconchego brasileiro. Nossos produtos são desenvolvidos para uso doméstico intenso, aventuras de pesca e camping exigente.</p>
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center mb-3"><i class="fas fa-calendar-check fs-3 me-3" style="color:#c49a2b;"></i> <div><strong>Data de fundação</strong><br>03/11/2005</div></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center mb-3"><i class="fas fa-id-card fs-3 me-3" style="color:#c49a2b;"></i> <div><strong>CNPJ</strong><br>75.293.662/0001-04</div></div>
+                        </div>
+                    </div>
+                    <div class="info-card p-4 mt-3">
+                        <i class="fas fa-map-pin me-2" style="color:#c49a2b;"></i> <strong>Matriz Industrial:</strong> Rodovia Br 470, 7235 - Badenfurt, Blumenau - SC | CEP: 89070-205
+                        <hr class="my-2">
+                        <i class="fas fa-phone-alt me-2" style="color:#c49a2b;"></i> <strong>Central de atendimento:</strong> (47) 3331-1500 <br>
+                        <i class="fas fa-envelope me-2" style="color:#c49a2b;"></i> <strong>E-mail:</strong> contato@altenburgtextil.com.br
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-white p-4 rounded-4 shadow">
+                        <img src="https://images.pexels.com/photos/3735678/pexels-photo-3735678.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Fábrica têxtil Altenburg" class="img-fluid rounded-4 mb-3" style="max-height: 280px; width:100%; object-fit:cover;">
+                        <div class="d-flex justify-content-between flex-wrap">
+                            <span><i class="fas fa-certificate text-success"></i> ISO 9001</span>
+                            <span><i class="fas fa-leaf text-success"></i> Sustentabilidade</span>
+                            <span><i class="fas fa-truck"></i> Entrega nacional</span>
+                        </div>
+                        <p class="mt-3 small text-muted">Unidade fabril em Blumenau – polo têxtil de Santa Catarina. Produzimos com responsabilidade ambiental e compromisso social.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFERENCIAIS COM ICONES E FRASES -->
+    <section class="container py-4">
+        <div class="row g-4 text-center">
+            <div class="col-md-3 col-6">
+                <i class="fas fa-recycle fa-2x" style="color:#2d6a4f;"></i>
+                <h5 class="mt-2">Fibras ecológicas</h5>
+                <small>Certificação FSC® e algodão orgânico</small>
+            </div>
+            <div class="col-md-3 col-6">
+                <i class="fas fa-hand-sparkles fa-2x" style="color:#2d6a4f;"></i>
+                <h5 class="mt-2">Hipoalergênico</h5>
+                <small>Ideal para toda família e pele sensível</small>
+            </div>
+            <div class="col-md-3 col-6">
+                <i class="fas fa-ship fa-2x" style="color:#2d6a4f;"></i>
+                <h5 class="mt-2">Resistência aquática</h5>
+                <small>Tecnologia repelente para pesca e camping</small>
+            </div>
+            <div class="col-md-3 col-6">
+                <i class="fas fa-temperature-low fa-2x" style="color:#2d6a4f;"></i>
+                <h5 class="mt-2">Térmico + UV</h5>
+                <small>Proteção contra raios solares e frio intenso</small>
+            </div>
+        </div>
+        <hr class="my-5">
+    </section>
+
+    <!-- GALERIA DE PRODUTOS (EXEMPLOS) -->
+    <section class="container py-2 mb-4">
+        <div class="text-center mb-4">
+            <h2 class="section-title">Produtos em destaque</h2>
+            <p class="text-muted">O que há de melhor para casa, pesca e camping</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+                    <img src="https://images.pexels.com/photos/9660220/pexels-photo-9660220.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Jogo de cama luxo" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between"><h5 class="fw-bold">Jogo de Lençol Premium</h5><i class="fas fa-bed"></i></div>
+                        <p class="card-text small">Fios 400 fios, acabamento refinado, disponível em várias cores. Perfeito para home e decoração.</p>
+                        <span class="badge bg-secondary">Doméstico</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+                    <img src="https://images.pexels.com/photos/7913933/pexels-photo-7913933.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Mochila pesca" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between"><h5 class="fw-bold">Mochila Impermeável</h5><i class="fas fa-fish"></i></div>
+                        <p class="card-text small">Capacidade 40L, costuras seladas, compartimentos para equipamentos de pesca.</p>
+                        <span class="badge bg-secondary">Pesca</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow-sm rounded-4 overflow-hidden">
+                    <img src="https://images.pexels.com/photos/6479703/pexels-photo-6479703.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Tenda camping" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between"><h5 class="fw-bold">Tenda Expedição 4P</h5><i class="fas fa-campground"></i></div>
+                        <p class="card-text small">Montagem rápida, material ripstop, resistente a ventos fortes, ideal para camping e trilhas.</p>
+                        <span class="badge bg-secondary">Camping</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FRASE DE IMPACTO + BANNER CTA -->
+    <div class="bg-nature text-white py-5 my-5">
+        <div class="container text-center">
+            <i class="fas fa-thread fs-1 mb-3"></i>
+            <h3 class="display-6 fw-semibold">"Costuramos inovação em cada fibra"</h3>
+            <p class="lead">Da sua sala de estar ao acampamento mais remoto, leve a confiança Altenburg.</p>
+            <a href="#contato" class="btn btn-outline-light btn-lg px-5 mt-2 rounded-pill"><i class="fas fa-store me-2"></i> Solicitar catálogo</a>
         </div>
     </div>
-</footer>
 
-<!-- Bootstrap JS bundle (necessário para navbar responsiva) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Script para suavizar navegação e ativar link ativo -->
-<script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
-    });
-    // Atualizar classe active no scroll (pequeno detalhe)
-    const sections = document.querySelectorAll('section[id]');
-    window.addEventListener('scroll', () => {
-        let current = '';
-        const scrollPos = window.scrollY + 120;
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-                current = section.getAttribute('id');
-            }
-        });
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
-        });
-    });
-</script>
+    <!-- CONTATO + FORM SIMPLES E LOCALIZAÇÃO -->
+    <section id="contato" class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-5">
+                <div class="bg-white p-4 rounded-4 shadow-sm h-100">
+                    <h3 class="mb-3"><i class="fas fa-map-marker-alt me-2" style="color:#c49a2b;"></i> Nossa unidade</h3>
+                    <p><strong>Altenburg Textil S.A.</strong><br>
+                    Rodovia Br 470, 7235 - Badenfurt, Blumenau - SC<br>
+                    CEP: 89070-205</p>
+                    <iframe src="https://maps.google.com/maps?q=Rodovia+Br+470,+7235+Blumenau+SC&output=embed" width="100%" height="200" style="border:0; border-radius: 20px;" allowfullscreen="" loading="lazy"></iframe>
+                    <hr>
+                    <p><i class="fas fa-phone-alt me-2"></i> (47) 3331-1500 <br>
+                    <i class="fab fa-whatsapp me-2" style="color:#25D366;"></i> (47) 9 9999-1500 (atendimento comercial)<br>
+                    <i class="far fa-clock me-2"></i> Segunda a Sexta: 8h às 18h</p>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="card border-0 shadow-lg rounded-4 p-4">
+                    <h3 class="mb-3"><i class="fas fa-paper-plane me-2" style="color:#c49a2b;"></i> Fale com a Altenburg</h3>
+                    <p>Envie sua mensagem e nossos especialistas em artefatos têxteis retornarão em breve.</p>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Nome completo *</label>
+                                <input type="text" class="form-control" placeholder="Seu nome" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">E-mail *</label>
+                                <input type="email" class="form-control" placeholder="exemplo@email.com" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Telefone</label>
+                                <input type="tel" class="form-control" placeholder="(00) 00000-0000">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Assunto</label>
+                                <select class="form-select">
+                                    <option>Produtos para casa</option>
+                                    <option>Artefatos de pesca</option>
+                                    <option>Equipamentos de camping</option>
+                                    <option>Outros / Atacado</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Mensagem</label>
+                                <textarea rows="3" class="form-control" placeholder="Conte-nos sua necessidade..."></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary-custom px-5 py-2">Enviar mensagem <i class="fas fa-arrow-right ms-1"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER COMPLETO -->
+    <footer class="bg-dark text-white pt-5 pb-4 mt-5">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="fw-bold mb-3"><i class="fas fa-feather-alt me-2" style="color:#c49a2b;"></i> Altenburg Têxtil</h4>
+                    <p>Fabricação de artefatos têxteis para uso doméstico, pesca e camping. Qualidade, conforto e durabilidade certificada.</p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="fw-semibold">Links rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-white-50 text-decoration-none">Início</a></li>
+                        <li class="mb-2"><a href="#produtos" class="text-white-50 text-decoration-none">Produtos</a></li>
+                        <li class="mb-2"><a href="#sobre" class="text-white-50 text-decoration-none">Sobre a empresa</a></li>
+                        <li class="mb-2"><a href="#contato" class="text-white-50 text-decoration-none">Contato e suporte</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="fw-semibold">Informações legais</h5>
+                    <p class="small text-white-50 mb-1">CNPJ: 75.293.662/0001-04</p>
+                    <p class="small text-white-50">Inscrição Estadual: Isento (contribuinte normal)<br>© 2005 - 2025 Altenburg Textil S.A. Todos os direitos reservados.</p>
+                    <p class="small"><i class="fas fa-recycle me-1"></i> Programa de reciclagem têxtil</p>
+                </div>
+            </div>
+            <hr class="bg-secondary mt-4">
+            <div class="text-center text-white-50 small">
+                <i class="fas fa-map-pin"></i> Badenfurt, Blumenau - SC | Telefone comercial: (47) 3331-1500 | Desenvolvido com dedicação têxtil.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
